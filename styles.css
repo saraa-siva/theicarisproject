@@ -1,1 +1,27 @@
+/* calls the element, the navigational bar */
+nav {
+  height: 40px;
+  background-color: #a6cff4;
+  border: 1px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
 
+}
+
+/* this is the class name for the unordered list */
+.navLinks {
+  display: flex;
+  list-style: none;
+  padding-top: 10px;
+  margin: 0;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+ 
+}
+
+/* relative to the div/nav bar  */
+.navLinks li {
+  position: relative;
+}
