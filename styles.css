@@ -1,27 +1,115 @@
-/* calls the element, the navigational bar */
-nav {
-  height: 40px;
-  background-color: #a6cff4;
-  border: 1px solid black;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
+/* overall page vibe */
 
+body { 
+  background: #faf9f7;
+  font-family: "Inter", sans-serif;
+} 
+
+/* navigation bar code jazz 💃 */
+
+#navigationBar {
+  position: sticky;
+  top: 20px;
+
+  width: fit-content;
+  margin: 25px auto;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 999px;
+
+  padding: 14px 24px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+
+  z-index: 1000;
 }
 
-/* this is the class name for the unordered list */
 .navLinks {
   display: flex;
-  list-style: none;
-  padding-top: 10px;
-  margin: 0;
-  justify-content: space-around;
   align-items: center;
-  text-decoration: none;
- 
+  justify-content: center;
+  gap: 2rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* relative to the div/nav bar  */
 .navLinks li {
   position: relative;
+}
+
+.navLinks a {
+  text-decoration: none;
+
+  color: #222;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transition: all 0.3s ease;
+}
+
+/* Elegant underline effect */
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 1.5px;
+
+  background: #111;
+
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  color: #000;
+}
+
+/* Active page */
+
+.navLinks a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.navLinks a.active::after {
+  width: 100%;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  #navigationBar {
+    width: 90%;
+    border-radius: 24px;
+    padding: 16px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+
+  .navLinks a {
+    font-size: 0.9rem;
+  }
 }
