@@ -8,6 +8,25 @@ body {
   font-style: normal;
 } 
 
+/* header image code jazz */
+header, .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 0; /* gives it some breathing room top and bottom */
+}
+
+header img, .header-container img {
+    width: 100%;
+    max-width: 1200px; /* stops it from becoming insanely huge on massive monitors */
+    height: auto;      /* maintains the aspect ratio so it doesn't get squished */
+    display: block;
+    object-fit: contain;
+    padding: 0 20px;   /* prevents the logo from touching the screen edges on mobile */
+}
+
 /* navigation bar code jazz */
 
 #navigationBar {
